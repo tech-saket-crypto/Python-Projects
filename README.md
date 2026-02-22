@@ -2,31 +2,40 @@
 📌 Project Overview
 This project performs an in-depth analysis of Zepto's delivery data to uncover patterns in consumer buying behaviour and operational efficiency. Using Python's data science stack, I cleaned the dataset and visualized key metrics to provide actionable business insights. 
 
-🛠️ Tech Stack & Libraries
-Python: Core programming language.
-Pandas: Data manipulation, reading CSV files, and cleaning null values.
-NumPy: Numerical operations and array handling.
-Matplotlib & Seaborn: Data visualization through bar charts, histograms, and heatmaps. 
-📂 Dataset Details
-Source: Zepto Products Dataset on Kaggle (or mention your specific source).
-Format: CSV file containing product categories, prices, discounts, and ratings. 
+🛠️ Tech Stack
+Language: Python
+Libraries: - Pandas for data manipulation and cleaning.
+Matplotlib & Seaborn for data visualization.
+NumPy for numerical operations.
+📂 Dataset Description
+The analysis utilizes two primary datasets:
 
-🔄 Data Operations Performed
-Data Cleaning: Handled missing values (NaNs) and removed duplicates to ensure data integrity.
-Descriptive Statistics: Calculated fundamental metrics like Sum, Mean, Min, and Max for pricing and delivery times.
-Exploratory Analysis:
-Category-wise sales performance.
-Price distribution and outlier detection.
-Correlation analysis between discounts and order volume. 
-GitHub
-GitHub
- +4
-📊 Key Visualizations
-Price Distributions: Histograms showing the most common price ranges.
-Category Analysis: Bar plots representing the most popular product categories.
-Trend Analysis: Line charts tracking order fluctuations over time. 
-🚀 How to Run the Project
+zepto_sales.csv: Contains transaction details including order_id, order_date, city, delivery_status, and total_amount.
+zepto_products.csv: Provides metadata for products, including product_name, category, and base_price.
+🚀 Key Features & Workflow
+1. Data Cleaning 🧼
+Real-world data is often messy. This project handles:
 
+Missing Values: Dropped nulls in critical categorical columns like city and delivery_status. For numerical gaps in delivery_time_mins, mean imputation was used to maintain data integrity.
+Duplicates: Identified and removed 216 duplicate records to prevent biased statistics.
+Formatting: Converted order_date to proper datetime objects for time-series analysis.
+2. Exploratory Data Analysis (EDA) 🔍
+Top Performers: Identified high-revenue products such as Handwash (Personal Care) and Paneer 200g (Dairy & Eggs).
+Geographical Analysis: Ranked cities by total sales, with Mumbai and Bangalore leading the revenue charts.
+Delivery Metrics: Calculated average delivery times across different cities to monitor service efficiency.
+3. Data Visualization 📈
+The project features a comprehensive 3x3 visualization grid showcasing:
 
-Install dependencies:
-pip install pandas numpy matplotlib seaborn
+Trends: Monthly sales growth throughout 2024.
+Distributions: Histograms of delivery times and pie charts of category-wise sales.
+Correlations: Scatter plots of quantity vs. total amount.
+Advanced Insights: A heatmap representing sales density by city and month.
+📊 Sample Insights
+Top Category: Personal Care leads in total sales amount (~23.4M).
+Delivery Efficiency: Average delivery time remains consistent across cities at approximately 26 minutes.
+Sales Peaks: December (2024-12) recorded the highest monthly sales trend.
+💻 How to Run
+Clone this repository.
+Ensure you have the datasets (zepto_sales (2).csv and zepto_products.csv) in the project directory.
+Install dependencies: pip install pandas matplotlib seaborn.
+Run the Jupyter Notebook: zepto_Final_Project.ipynb.
